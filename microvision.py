@@ -229,7 +229,7 @@ def print_letter(letter, pins = True):
         # Add blank column to turn the pins off
         for y in range(0, 5):
             if pins:
-                pins[y].write_digital(0)
+                pin_map[y].write_digital(0)
             else:
                 display.clear()
 
