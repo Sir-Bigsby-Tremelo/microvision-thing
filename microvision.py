@@ -1,6 +1,6 @@
 from microbit import *
 
-pins = [
+pin_map = [
     pin16,
     pin15,
     pin14,
@@ -221,7 +221,7 @@ def print_letter(letter, pins = True):
                 pin_value = 1 if code == "#" else 0
                 # If we're not connected to the GPIO pins use the matrix instead
                 if pins:
-                    pins[y].write_digital(pin_value)
+                    pin_map[y].write_digital(pin_value)
                 else:
                     display.set_pixel(x, y, pin_value*9)
             sleep(col_pause)
