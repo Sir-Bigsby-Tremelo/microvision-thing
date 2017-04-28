@@ -10,7 +10,7 @@ pins = [
 
 alphabet = {
     "a": [
-        "#####",
+        " ### ",
         "#   #",
         "#####",
         "#   #",
@@ -52,11 +52,11 @@ alphabet = {
         "#    "
     ],
     "g": [
-        "#####",
+        " ####",
         "#    ",
         "#  ##",
         "#   #",
-        "#####"
+        " ####"
     ],
     "h": [
         "#   #",
@@ -106,32 +106,32 @@ alphabet = {
         "# # #",
         "#  ##",
         "#   #"
-    ]
+    ],
     "o": [
-        "#####",
+        " ### ",
         "#   #",
         "#   #",
         "#   #",
-        "#####"
+        " ### "
     ],
     "p": [
-        "#####",
+        "#### ",
         "#   #",
-        "#####",
+        "#### ",
         "#    ",
         "#    "
     ],
     "q": [
-        "#####",
+        " ### ",
         "#   #",
         "#   #",
         "#  ##",
-        "#####"
+        " ####"
     ],
     "r": [
-        "#####",
+        "#### ",
         "#   #",
-        "#####",
+        "#### ",
         "#  # ",
         "#   #"
     ],
@@ -213,34 +213,39 @@ def print_letter(letter, pins = True):
 
     if pattern:
 
-        sleep(time_1)
+        sleep(letter_pause)
         for x in range(0, 5):
             for y in range(0, 5):
                 print("%d,%d" % (x,y))
                 code = pattern[y][x]
                 pin_value = 1 if code == "#" else 0
+                # If we're not connected to the GPIO pins use the matrix instead
                 if pins:
                     pins[y].write_digital(pin_value)
                 else:
                     display.set_pixel(x, y, pin_value*9)
-            sleep(time_)
+            sleep(col_pause)
 
+        # Add blank column to turn the pins off
         for y in range(0, 5):
             if pins:
                 pins[y].write_digital(0)
             else:
                 display.clear()
 
-time_  = 1
-time_1 = 1
-gap = 100
+# increase the timing if we're running this on the matrix
+multiplier = 1 if pin0.read_digital() else 100
+col_pause = 1 * multiplier
+letter_pause = 1 * multiplier
+gap = 100 * multiplier
+
 #use a to increase the delay after the reed switch and b to decrease it
 if button_a.is_pressed():
     gap=gap+10
 if button_b.is_pressed():
     gap=gap-10
 
-word = "hello"
+word = "hello world"
 
 while True:
 
