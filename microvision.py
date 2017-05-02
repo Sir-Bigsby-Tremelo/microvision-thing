@@ -234,7 +234,8 @@ def print_letter(letter, pins = True):
                 display.clear()
 
 # increase the timing if we're running this on the matrix
-multiplier = 1 if pin0.read_digital() else 100
+has_pins = pin0.read_digital()
+multiplier = 1 if has_pins else 100
 col_pause = 1 * multiplier
 letter_pause = 1 * multiplier
 gap = 100 * multiplier
@@ -251,5 +252,6 @@ while True:
 
     sleep(gap)
 
-    for char in list(word):
-        print_letter(char, pin0.read_digital())
+    if not has_pins or pin0.read_digital():
+        for char in list(word):
+            print_letter(char, has_pins)
