@@ -1,48 +1,48 @@
 from microbit import *
 
-time_   = 1
-time_1  = 1
+time   = 1
 gap  = 100
+
 #use a to increase the delay after the reed switch and b to decrease it
 if button_a.is_pressed():
-    gap==gap+10
+    gap=gap+10
 if button_b.is_pressed():
-    gap==gap-10
+    gap=gap-10
     
 
 while True:
     if pin0.read_digital():    
         sleep(gap)
         #H
-        sleep(time_1)
+        sleep(time)
         pin16.write_digital(1)
         pin15.write_digital(1)
-        pin14.write_digital(1)
+        pin14.write_digital(1) 
         pin13.write_digital(1)
         pin12.write_digital(1)
     
-        sleep(time_)
+        sleep(time)
         pin16.write_digital(0)
         pin15.write_digital(0)
         pin14.write_digital(1)
         pin13.write_digital(0)
         pin12.write_digital(0)
         
-        sleep(time_)
+        sleep(time)
         pin16.write_digital(0)
         pin15.write_digital(0)
         pin14.write_digital(1)
         pin13.write_digital(0)
         pin12.write_digital(0)
     
-        sleep(time_)
+        sleep(time)
         pin16.write_digital(1)
         pin15.write_digital(1)
         pin14.write_digital(1)
         pin13.write_digital(1)
         pin12.write_digital(1)
 
-        sleep(time_)
+        sleep(time)
         pin16.write_digital(0)
         pin15.write_digital(0)
         pin14.write_digital(0)
@@ -50,35 +50,35 @@ while True:
         pin12.write_digital(0)
     
         #E
-        sleep(time_1)
+        sleep(time)
         pin16.write_digital(1)
         pin15.write_digital(1)
         pin14.write_digital(1)
         pin13.write_digital(1)
         pin12.write_digital(1)
             
-        sleep(time_)
+        sleep(time)
         pin16.write_digital(1)
         pin15.write_digital(0)
         pin14.write_digital(1)
         pin13.write_digital(0)
         pin12.write_digital(1)
     
-        sleep(time_)
+        sleep(time)
         pin16.write_digital(1)
         pin15.write_digital(0)
         pin14.write_digital(1)
         pin13.write_digital(0)
         pin12.write_digital(1)
 
-        sleep(time_)
+        sleep(time)
         pin16.write_digital(1)
         pin15.write_digital(0)
         pin14.write_digital(1)
         pin13.write_digital(0)
         pin12.write_digital(1)
     
-        sleep(time_)
+        sleep(time)
         pin16.write_digital(0)
         pin15.write_digital(0)
         pin14.write_digital(0)
@@ -86,35 +86,35 @@ while True:
         pin12.write_digital(0)
 
         #L
-        sleep(time_1)
+        sleep(time)
         pin16.write_digital(1)
         pin15.write_digital(1)
         pin14.write_digital(1)
         pin13.write_digital(1)
         pin12.write_digital(1)
     
-        sleep(time_)
+        sleep(time)
         pin16.write_digital(0)
         pin15.write_digital(0)
         pin14.write_digital(0)
         pin13.write_digital(0)
         pin12.write_digital(1)
         
-        sleep(time_)
+        sleep(time)
         pin16.write_digital(0)
         pin15.write_digital(0)
         pin14.write_digital(0)
         pin13.write_digital(0)
         pin12.write_digital(1)
     
-        sleep(time_)
+        sleep(time)
         pin16.write_digital(0)
         pin15.write_digital(0)
         pin14.write_digital(0)
         pin13.write_digital(0)
         pin12.write_digital(1)
 
-        sleep(time_)
+        sleep(time)
         pin16.write_digital(0)
         pin15.write_digital(0)
         pin14.write_digital(0)
@@ -122,35 +122,35 @@ while True:
         pin12.write_digital(0)
     
         #L
-        sleep(time_1)
+        sleep(time)
         pin16.write_digital(1)
         pin15.write_digital(1)
         pin14.write_digital(1)
         pin13.write_digital(1)
         pin12.write_digital(1)
 
-        sleep(time_)
+        sleep(time)
         pin16.write_digital(0)
         pin15.write_digital(0)
         pin14.write_digital(0)
         pin13.write_digital(0)
         pin12.write_digital(1)
     
-        sleep(time_)
+        sleep(time)
         pin16.write_digital(0)
         pin15.write_digital(0)
         pin14.write_digital(0)
         pin13.write_digital(0)
         pin12.write_digital(1)
 
-        sleep(time_)
+        sleep(time)
         pin16.write_digital(0)
         pin15.write_digital(0)
         pin14.write_digital(0)
         pin13.write_digital(0)
         pin12.write_digital(1)
     
-        sleep(time_)
+        sleep(time)
         pin16.write_digital(0)
         pin15.write_digital(0)
         pin14.write_digital(0)
@@ -158,38 +158,37 @@ while True:
         pin12.write_digital(0)
         
         #O
-        sleep(time_1)
+        sleep(time)
         pin16.write_digital(0)
         pin15.write_digital(1)
         pin14.write_digital(1)
         pin13.write_digital(1)
         pin12.write_digital(0)
     
-        sleep(time_)
+        sleep(time)
         pin16.write_digital(1)
         pin15.write_digital(0)
         pin14.write_digital(0)
         pin13.write_digital(0)
         pin12.write_digital(1)
         
-        sleep(time_)
+        sleep(time)
         pin16.write_digital(1)
         pin15.write_digital(0)
         pin14.write_digital(0)
         pin13.write_digital(0)
         pin12.write_digital(1)
     
-        sleep(time_)
+        sleep(time)
         pin16.write_digital(0)
         pin15.write_digital(1)
         pin14.write_digital(1)
         pin13.write_digital(1)
         pin12.write_digital(0)
             
-        sleep(time_)
+        sleep(time)
         pin16.write_digital(0)
         pin15.write_digital(0)
         pin14.write_digital(0)
         pin13.write_digital(0)
         pin12.write_digital(0)
-
